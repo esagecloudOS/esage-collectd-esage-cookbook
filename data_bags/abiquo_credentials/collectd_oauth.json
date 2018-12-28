@@ -1,0 +1,7 @@
+{
+    "id": "collectd_oauth",
+    "app_key": "CHANGEME",
+    "app_secret": "CHANGEME",
+    "access_token": "CHANGEME",
+    "access_token_secret": "CHANGEME"
+}

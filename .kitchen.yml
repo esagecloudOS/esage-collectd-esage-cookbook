@@ -1,0 +1,23 @@
+driver:
+  name: vagrant
+  vm_hostname: false
+
+provisioner:
+  name: chef_zero
+  require_chef_omnibus: 12.5.1
+  data_bags_path: test/data_bags
+
+transport:
+  compression: none
+
+platforms:
+  - name: centos-6.7
+  - name: ubuntu-16.04
+
+suites:
+  - name: collectd-abiquo
+    run_list:
+      - recipe[collectd-abiquo]
+    attributes:
+      collectd_abiquo:
+        endpoint: http://localhost
